@@ -1,7 +1,7 @@
 name:                signify-hs
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            A Haskell clone of OpenBSD signify.
--- description:
+description:         This program with its corresponding library implements most of (OpenBSD) signify. Missing are GZip-header-embedding of signatures and checksum files.
 license:             BSD3
 license-file:        LICENSE
 author:              Marcel Fourné
@@ -16,7 +16,7 @@ library
   exposed-modules: Crypto.ECC.Signify
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.12
+  build-depends:       base >=4.12 && < 5
                      , bytestring
                      , base64-bytestring
                      , cryptohash-sha512
@@ -33,7 +33,7 @@ executable signify-hs
   main-is:             Main.hs
   other-modules:       Crypto.ECC.Signify
   -- other-extensions:
-  build-depends:       base >=4.12
+  build-depends:       base >=4.12 && < 5
                      , bytestring
                      , base64-bytestring
                      , cryptohash-sha512

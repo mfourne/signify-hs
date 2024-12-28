@@ -1,0 +1,15 @@
+#+title:  signify-hs TODO
+#+author: Marcel Fourné
+#+date:   2021-04-
+
+* basic release
+** DONE basic signify functionaliy
+
+* feature releases
+** TODO documentation
+** TODO embedding of signatures into gzip headers
+** TODO checking checksum files
+
+* architecture releases
+** TODO pure Haskell SHA2-512
+** TODO pure Haskell BCryptPBKDF

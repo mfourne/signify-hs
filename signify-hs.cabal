@@ -1,15 +1,17 @@
 name:                signify-hs
-version:             0.1.0.1
+version:             0.1.0.3
 synopsis:            A Haskell clone of OpenBSD signify.
 description:         This program with its corresponding library implements most of (OpenBSD) signify. Missing are GZip-header-embedding of signatures and checksum files.
 license:             BSD3
 license-file:        LICENSE
 author:              Marcel Fourné
 maintainer:          Marcel Fourné (haskell@marcelfourne.de)
--- copyright:
+copyright:       (c) Marcel Fourné, 2020-2024
 category:            Cryptography
 build-type:          Simple
 extra-source-files:  CHANGELOG.md
+                     README.md
+                     TODO.org
 cabal-version:       >=1.10
 
 library
@@ -20,7 +22,7 @@ library
                      , bytestring
                      , base64-bytestring
                      , cryptohash-sha512
-                     , cryptonite
+                     , crypton
                      , eccrypto
                      , parsec
   hs-source-dirs:      src
@@ -37,7 +39,7 @@ executable signify-hs
                      , bytestring
                      , base64-bytestring
                      , cryptohash-sha512
-                     , cryptonite
+                     , crypton
                      , eccrypto
                      , filepath
 --                     , MissingH
@@ -51,3 +53,7 @@ executable signify-hs
   ghc-options: -O2
                -Wall
                -Wincomplete-uni-patterns
+
+source-repository head
+  type:     git
+  location: https://github.com/mfourne/signify-hs.git
